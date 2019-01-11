@@ -70,7 +70,7 @@ resource "aws_security_group" "ext_tableau_db" {
 }
 
 resource "aws_db_instance" "postgres" {
-  identifier              = "ext_tableau-postgres-${local.naming_suffix}"
+  identifier              = "ext-tableau-postgres-${local.naming_suffix}"
   allocated_storage       = 10
   storage_type            = "gp2"
   engine                  = "postgres"
