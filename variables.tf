@@ -1,8 +1,5 @@
 variable "appsvpc_id" {}
 variable "opssubnet_cidr_block" {}
-variable "ext_tableau_cidr_block" {}
-variable "az2" {}
-variable "ext_tableau_cidr_block_az2" {}
 
 variable "naming_suffix" {
   default     = false
@@ -11,6 +8,11 @@ variable "naming_suffix" {
 
 variable "az" {
   default     = "eu-west-2a"
+  description = "Default availability zone for the subnet."
+}
+
+variable "az2" {
+  default     = "eu-west-2b"
   description = "Default availability zone for the subnet."
 }
 
@@ -61,6 +63,11 @@ variable "dq_ops_ingress_cidr" {
 
 variable "dq_external_dashboard_subnet" {
   default     = "10.1.14.0/24"
+  description = "DQ Apps CIDR as per IP Addresses and CIDR blocks document"
+}
+
+variable "dq_external_dashboard_subnet_az2" {
+  default     = "10.1.15.0/24"
   description = "DQ Apps CIDR as per IP Addresses and CIDR blocks document"
 }
 

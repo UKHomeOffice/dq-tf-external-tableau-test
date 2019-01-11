@@ -20,9 +20,6 @@ class TestE2E(unittest.TestCase):
 
               appsvpc_id                   = "1234"
               opssubnet_cidr_block         = "1.2.3.0/24"
-              ext_tableau_cidr_block       = "10.1.14.0/24"
-              ext_tableau_cidr_block_az2   = "10.1.15.0/24"
-              az2                          = "eu-west-2b"
               acp_prod_ingress_cidr        = "10.5.0.0/16"
               dq_ops_ingress_cidr          = "10.2.0.0/16"
               dq_external_dashboard_subnet = "10.1.14.0/24"

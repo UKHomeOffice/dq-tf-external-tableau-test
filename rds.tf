@@ -13,7 +13,7 @@ resource "aws_db_subnet_group" "rds" {
 
 resource "aws_subnet" "ext_tableau_az2" {
   vpc_id                  = "${var.appsvpc_id}"
-  cidr_block              = "${var.ext_tableau_cidr_block_az2}"
+  cidr_block              = "${var.dq_external_dashboard_subnet_az2}"
   map_public_ip_on_launch = false
   availability_zone       = "${var.az2}"
 
