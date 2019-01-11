@@ -115,8 +115,8 @@ resource "aws_security_group" "sgrp" {
     protocol  = "${var.http_protocol}"
 
     cidr_blocks = [
-      #"${var.dq_ops_ingress_cidr}",
-      #"${var.acp_prod_ingress_cidr}",
+      "${var.dq_ops_ingress_cidr}",
+      "${var.acp_prod_ingress_cidr}",
       "${var.peering_cidr_block}",
     ]
   }
