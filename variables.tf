@@ -6,6 +6,16 @@ variable "naming_suffix" {
   description = "Naming suffix for tags, value passed from dq-tf-apps"
 }
 
+variable "database_name" {
+  default     = "internal_tableau"
+  description = "RDS Postgres database name"
+}
+
+variable "port" {
+  default     = "5432"
+  description = "RDS Postgres port access"
+}
+
 variable "az" {
   default     = "eu-west-2a"
   description = "Default availability zone for the subnet."

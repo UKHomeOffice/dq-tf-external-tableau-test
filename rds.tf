@@ -93,6 +93,8 @@ resource "aws_db_instance" "postgres" {
   instance_class          = "db.t2.small"
   username                = "${random_string.username.result}"
   password                = "${random_string.password.result}"
+  name                    = "${var.database_name}"
+  port                    = "${var.port}"
   backup_window           = "00:00-01:00"
   maintenance_window      = "mon:01:30-mon:02:30"
   backup_retention_period = 14
@@ -104,7 +106,7 @@ resource "aws_db_instance" "postgres" {
   vpc_security_group_ids = ["${aws_security_group.ext_tableau_db.id}"]
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false 
   }
 
   tags {
