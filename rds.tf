@@ -115,7 +115,7 @@ resource "aws_db_instance" "postgres" {
 }
 
 resource "aws_ssm_parameter" "rds_external_tableau_username" {
-  name  = "rds_external_table_username"
+  name  = "rds_external_tableau_username"
   type  = "SecureString"
   value = "${random_string.username.result}"
 }
