@@ -111,3 +111,15 @@ resource "aws_db_instance" "postgres" {
     Name = "ext_tableau-postgres-${local.naming_suffix}"
   }
 }
+
+resource "aws_ssm_parameter" "rds_external_tableau_username" {
+  name  = "rds_external_table_username"
+  type  = "SecureString"
+  value = "${random_string.username.result}"
+}
+
+resource "aws_ssm_parameter" "rds_external_tableau_password" {
+  name  = "rds_external_tableau_password"
+  type  = "SecureString"
+  value = "${random_string.password.result}"
+}
