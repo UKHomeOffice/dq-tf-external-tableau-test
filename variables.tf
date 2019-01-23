@@ -36,6 +36,31 @@ variable "RDP_from_port" {
   description = "From port for RDP traffic"
 }
 
+variable "rds_from_port" {
+  default     = 5432
+  description = "From port for Postgres traffic"
+}
+
+variable "rds_to_port" {
+  default     = 5432
+  description = "To port for Postgres traffic"
+}
+
+variable "rds_protocol" {
+  default     = "tcp"
+  description = "Protocol for Postgres traffic"
+}
+
+variable "dq_lambda_subnet_cidr" {
+  default     = "10.1.42.0/24"
+  description = "Dedicated subnet for Lambda ENIs"
+}
+
+variable "dq_lambda_subnet_cidr_az2" {
+  default     = "10.1.43.0/24"
+  description = "Dedicated subnet for Lambda ENIs"
+}
+
 variable "RDP_to_port" {
   default     = 3389
   description = "To port for RDP traffic"
